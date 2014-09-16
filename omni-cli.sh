@@ -18,6 +18,8 @@
 #    + WordPress
 #        - use wp-cli or similar https://github.com/wp-cli/wp-cli
 #        - probably wp-cli-ssh is perfect for one-liner https://github.com/x-team/wp-cli-ssh
+wodpressuser="ssh sudoroom.org -e 'cd /var/www/sudoroom.org/public_html/ && wp $username $email --user_pass=$password'"
 #    + MediaWiki
 #        - Modify maintenance/createAndPromote.php script as recommended here https://stackoverflow.com/questions/928594/script-to-add-user-to-mediawiki
 #        - See createUserWithEmail.php in this directory, extends to include and validate email address.
+mediawikiuser="ssh sudoroom.org -e 'cd /var/www/sudoroom.org/public_html/mediawiki/maintenance && php createUserWithEmail.php $username $password $email'"
