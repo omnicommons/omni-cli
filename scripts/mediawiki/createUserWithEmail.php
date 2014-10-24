@@ -30,7 +30,7 @@ require_once __DIR__ . '/Maintenance.php';
  *
  * @ingroup Maintenance
  */
-class CreateAndPromote extends Maintenance {
+class CreateUserWithEmail extends Maintenance {
 
 	static $permitRoles = array( 'sysop', 'bureaucrat', 'bot' );
 
@@ -128,5 +128,5 @@ class CreateAndPromote extends Maintenance {
 	}
 }
 
-$maintClass = "CreateAndPromote";
+$maintClass = "CreateUserWithEmail";
 require_once RUN_MAINTENANCE_IF_MAIN;
